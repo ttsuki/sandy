@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <IntDir>$(SolutionDir)build\$(ProjectName)_$(Platform)$(Configuration)\int\</IntDir>
+        <OutDir>$(SolutionDir)build\$(ProjectName)_$(Platform)$(Configuration)\out\</OutDir>
+    </PropertyGroup>
+    <ItemDefinitionGroup>
+        <ClCompile>
+            <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+            <LanguageStandard>stdcpp17</LanguageStandard>
+            <ConformanceMode>true</ConformanceMode>
+            <AdditionalOptions>/source-charset:utf-8 /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+            <WarningLevel>Level4</WarningLevel>
+            <SDLCheck>true</SDLCheck>
+            <MultiProcessorCompilation>true</MultiProcessorCompilation>
+            <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <PrecompiledHeader>Use</PrecompiledHeader>
+            <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+            <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
+            <FloatingPointModel>Fast</FloatingPointModel>
+            <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+        </ClCompile>
+        <Link>
+            <EnableCOMDATFolding Condition="'$(Configuration)'!='Debug'">true</EnableCOMDATFolding>
+            <OptimizeReferences Condition="'$(Configuration)'!='Debug'">true</OptimizeReferences>
+            <GenerateDebugInformation>true</GenerateDebugInformation>
+        </Link>
+    </ItemDefinitionGroup>
+</Project>

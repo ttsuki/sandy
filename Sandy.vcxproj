@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d74c6bf9-2938-43ee-bbad-943f51d2d72b}</ProjectGuid>
+    <RootNamespace>sandy</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="..\xtl\xtl.vcxitems" Label="Shared" />
+    <Import Project="..\arkana\ark.vcxitems" Label="Shared" />
+    <Import Project="..\xtw\xtw.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Sandy.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Sandy.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Sandy.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="Sandy.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Sandy\D3d11\Buffer.h" />
+    <ClInclude Include="Sandy\D3d11\Device.h" />
+    <ClInclude Include="Sandy\D3d11\RenderTarget.h" />
+    <ClInclude Include="Sandy\D3d11\SwapChain.h" />
+    <ClInclude Include="Sandy\D3d11\Texture.h" />
+    <ClInclude Include="Sandy\D3d11\UtilityFunctions.h" />
+    <ClInclude Include="Sandy\D3d11Stationery\BasicPrimitiveBatch.h" />
+    <ClInclude Include="Sandy\D3d11Stationery\CommonStateObjects.h" />
+    <ClInclude Include="Sandy\D3d11Stationery\DynamicFontAtlas.h" />
+    <ClInclude Include="Sandy\D3d11Stationery\DynamicTextureAtlas.h" />
+    <ClInclude Include="Sandy\D3d11Stationery\VideoPlaybackTexture.h" />
+    <ClInclude Include="Sandy\MediaFoundation\MfSample.h" />
+    <ClInclude Include="Sandy\MediaFoundation\MfUtilityFunctions.h" />
+    <ClInclude Include="Sandy\MediaFoundation\MfVideoDecoder.h" />
+    <ClInclude Include="Sandy\MediaFoundation\MfVideoFrameSample.h" />
+    <ClInclude Include="Sandy\MediaFoundation\SurfaceFormatConverter.h" />
+    <ClInclude Include="Sandy\GdiPlus\GdipFontGlyphBitmapLoader.h" />
+    <ClInclude Include="Sandy\misc\Math.h" />
+    <ClInclude Include="Sandy\misc\Span.h" />
+    <ClInclude Include="Sandy\pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sandy\D3d11\Buffer.cpp" />
+    <ClCompile Include="Sandy\D3d11\Device.cpp" />
+    <ClCompile Include="Sandy\D3d11\RenderTarget.cpp" />
+    <ClCompile Include="Sandy\D3d11\SwapChain.cpp" />
+    <ClCompile Include="Sandy\D3d11\Texture.cpp" />
+    <ClCompile Include="Sandy\D3d11\UtilityFunctions.cpp" />
+    <ClCompile Include="Sandy\D3d11Stationery\BasicPrimitiveBatch.cpp" />
+    <ClCompile Include="Sandy\D3d11Stationery\CommonStateObjects.cpp" />
+    <ClCompile Include="Sandy\D3d11Stationery\DyanmicFontAtlas.cpp" />
+    <ClCompile Include="Sandy\D3d11Stationery\DynamicTextureAtlas.cpp" />
+    <ClCompile Include="Sandy\D3d11Stationery\VideoPlaybackTexture.cpp" />
+    <ClCompile Include="Sandy\MediaFoundation\MfSample.cpp" />
+    <ClCompile Include="Sandy\MediaFoundation\MfUtilityFunctions.cpp" />
+    <ClCompile Include="Sandy\MediaFoundation\MfVideoDecoder.cpp" />
+    <ClCompile Include="Sandy\MediaFoundation\MfVideoFrameSample.cpp" />
+    <ClCompile Include="Sandy\MediaFoundation\SurfaceFormatConverter.cpp" />
+    <ClCompile Include="Sandy\GdiPlus\GdipFontGlyphBitmapLoader.cpp" />
+    <ClCompile Include="Sandy\misc\Math.cpp" />
+    <ClCompile Include="Sandy\misc\Span.cpp" />
+    <ClCompile Include="Sandy\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="Directory.Build.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="misc\Math.natvis" />
+    <Natvis Include="Sandy\misc\Math.natvis" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
