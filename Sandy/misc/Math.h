@@ -15,7 +15,7 @@
 #pragma push_macro("max")
 #undef min
 #undef max
-#include <ark/xmm.h>
+#include "ark/xmm.h"
 #pragma pop_macro("min")
 #pragma pop_macro("max")
 

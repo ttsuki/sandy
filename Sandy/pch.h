@@ -15,7 +15,6 @@
 #include <dxgi1_6.h>
 #include <d3d11_4.h>
 
-#include <xtl/xtl.h> // https://github.com/ttsuki/xtl/
 #include <xtw/xtw.h> // https://github.com/ttsuki/xtw/
 
 #endif //PCH_H

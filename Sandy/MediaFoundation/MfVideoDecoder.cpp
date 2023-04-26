@@ -18,8 +18,9 @@
 #include <thread>
 #include <mutex>
 
-#include <xtl/xtl_concurrent_queue.h>
 #include <xtw/debug.h>
+
+#include "../misc/ConcurrentQueue.h"
 
 namespace sandy::mf
 {
@@ -156,7 +157,7 @@ namespace sandy::mf
 
         std::thread worker_thread_{};
         std::atomic_flag running_{};
-        std::optional<xtl::concurrent_queue<MfVideoFrameSample>> decoded_frames_{};
+        std::optional<ConcurrentQueue<MfVideoFrameSample>> decoded_frames_{};
         MfVideoFrameSample next_frame_{};
 
     public:
@@ -297,7 +298,7 @@ namespace sandy::mf
                         if (sample)
                         {
                             sample.Sample()->SetSampleTime(sample.Time() + video_duration_ * loop_count);
-                            decoded_frames_->push(MfVideoFrameSample(sample.Sample(), frame_media_type_));
+                            decoded_frames_->emplace(MfVideoFrameSample(sample.Sample(), frame_media_type_));
                         }
                     }
 

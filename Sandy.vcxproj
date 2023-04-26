@@ -52,8 +52,6 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-    <Import Project="..\xtl\xtl.vcxitems" Label="Shared" />
-    <Import Project="..\arkana\ark.vcxitems" Label="Shared" />
     <Import Project="..\xtw\xtw.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -105,12 +103,14 @@
     <ClInclude Include="Sandy\D3d11Stationery\DynamicFontAtlas.h" />
     <ClInclude Include="Sandy\D3d11Stationery\DynamicTextureAtlas.h" />
     <ClInclude Include="Sandy\D3d11Stationery\VideoPlaybackTexture.h" />
+    <ClInclude Include="Sandy\misc\ConcurrentQueue.h" />
     <ClInclude Include="Sandy\MediaFoundation\MfSample.h" />
     <ClInclude Include="Sandy\MediaFoundation\MfUtilityFunctions.h" />
     <ClInclude Include="Sandy\MediaFoundation\MfVideoDecoder.h" />
     <ClInclude Include="Sandy\MediaFoundation\MfVideoFrameSample.h" />
     <ClInclude Include="Sandy\MediaFoundation\SurfaceFormatConverter.h" />
     <ClInclude Include="Sandy\GdiPlus\GdipFontGlyphBitmapLoader.h" />
+    <ClInclude Include="Sandy\misc\ark\xmm.h" />
     <ClInclude Include="Sandy\misc\Math.h" />
     <ClInclude Include="Sandy\misc\Span.h" />
     <ClInclude Include="Sandy\pch.h" />
@@ -133,6 +133,7 @@
     <ClCompile Include="Sandy\MediaFoundation\MfVideoFrameSample.cpp" />
     <ClCompile Include="Sandy\MediaFoundation\SurfaceFormatConverter.cpp" />
     <ClCompile Include="Sandy\GdiPlus\GdipFontGlyphBitmapLoader.cpp" />
+    <ClCompile Include="Sandy\misc\ConcurrentQueue.cpp" />
     <ClCompile Include="Sandy\misc\Math.cpp" />
     <ClCompile Include="Sandy\misc\Span.cpp" />
     <ClCompile Include="Sandy\pch.cpp">

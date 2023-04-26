@@ -17,7 +17,7 @@
 #endif
 
 #ifdef __AVX2__
-#include <ark/xmm.h>
+#include "../misc/ark/xmm.h"
 #endif
 
 namespace sandy::mf::sfc
