@@ -145,7 +145,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
-    <None Include="Directory.Build.props" />
+    <None Include=".gitignore" />
+    <None Include="LICENSE.md" />
+    <None Include="README.md" />
+    <None Include="Sandy.props" />
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="misc\Math.natvis" />
